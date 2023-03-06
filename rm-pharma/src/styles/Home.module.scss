@@ -1,3 +1,5 @@
+
+
 .innerBody{
   display: flex;
   flex-direction: column;
@@ -285,12 +287,62 @@
 
 
 .Button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  background: var(--button-background);
-  color: var(--button-text);
+  display: flex;
+  padding: 0.5rem 3rem;
+  border-radius:  0px 25px 0px 0px;
+  border: 1px solid var(--the-red);
+  background: var(--the-red);
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
-  transition: background 200ms, color 200ms;
+  transition: all 200ms, color 200ms;
+  &:hover {
+    background: transparent;
+    color: var(--the-red);
+  }
+}
+
+
+.Button2 {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms, color 200ms;
+  &:hover, &:focus, &:active {
+    color: var(--the-red);
+    text-decoration: underline;
+   text-underline-offset: 2px;
+   text-decoration-thickness: 2px;
+  }
+}
+
+.Search {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  border-radius: var(--the-border);
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
+  i {
+    font-size: small;
+    color: var(--gray);
+  }
+  input {
+    all: unset;
+    width: 100%;
+    text-align: start;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray);
+    background-color: transparent;
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+
+  
+
 }

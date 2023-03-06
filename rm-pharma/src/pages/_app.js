@@ -1,9 +1,17 @@
+import 'bootstrap/scss/bootstrap.scss'
 import '@/styles/globals.scss'
+
+import { useEffect } from 'react'
 import Layer from '@/components/layer'
 import Head from 'next/head'
 import Meta from '@/components/meta'
 
 export default function App({ Component, pageProps }) {
+  
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+
   return (
     <>
     <Head>
@@ -11,7 +19,6 @@ export default function App({ Component, pageProps }) {
       <Meta />
       <link rel="icon" href="/favicon.ico" />
       <link rel="short icon" href="/favicon.ico" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></link>
     </Head>
   <Layer>
   <Component {...pageProps} />
