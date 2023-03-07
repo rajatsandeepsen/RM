@@ -1,13 +1,15 @@
 import { Inter } from 'next/font/google'
+import Link from 'next/link';
 import styles from '@/styles/Home.module.scss'
 
 const Button = (props) => {
     const { text, link, priority } = props.data;
     if (priority === "primary") {
         return ( 
-            <a className={styles.Button} href={link}>
+            <Link className={styles.Button} href={link}>
                 {text}
-            </a>
+            </Link>
+            
          );
     }
     else {

@@ -40,6 +40,9 @@ const Footer = () => {
             <li><a href="">Order Tracking</a></li>
           </ul>
         </div>
+        
+          <p className="text-center w-100 border-top p-1 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus alias esse maiores id pariatur similique veritatis neque corrupti fugit</p>
+        
         </footer>
 
      );

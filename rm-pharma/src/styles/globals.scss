@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap');
 
 :root {
   --max-width: 1100px;
@@ -64,8 +65,9 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: #fff;
   background-image: url('/bg.png');
-  background-size: 50%;
+  background-size: 700px;
   background-repeat: repeat; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -73,21 +75,23 @@ a {
   text-decoration: none;
 }
 
-footer {
-  
+footer { 
   margin-top: auto;
+  background-color: var(--the-red);
+  color: #fff;
+  font-size: .6rem;
+
 div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px; 
-  background-color: var(--the-red);
-    color: #fff;
+
     ul {
       max-height: 150px;
       flex: 1;
-      padding: 0.5em;/* add some padding ?*/
+      padding: 0.5em;
       text-align: center;
       border-right: 1px solid #fff;
       list-style: none;
@@ -116,8 +120,30 @@ div {
 
 
 main {
+  width: 100%;
   min-height: 100vh;
   display:flex;
   flex-direction: column;
+  main {
+    gap: 3rem;
+  }
 }
 
+@media (max-width: 720px) {
+  footer { 
+    div {
+      flex-direction: column;
+      ul {
+        border: none;
+      }
+    }
+  }
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+.theRed {
+  color: var(--the-red);
+}

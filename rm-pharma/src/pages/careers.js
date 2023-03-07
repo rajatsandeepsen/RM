@@ -1,13 +1,68 @@
 import styles from '@/styles/Home.module.scss'
+import Image from 'next/image'
+import {Apply, Whyjoin, Services} from '@/components/applynow'
+import ResponsiveCarousel from '@/components/carousel'
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <div className={styles.description}>
-                <p>
-                    Get started by editing&nbsp;
-                </p>
+        <main>
+            <section className={styles.careerShowcase}>
+            <div className='container py-5 gap-3 d-flex align-items-center flex-md-row flex-column-reverse'>
+                <div className='d-flex flex-column gap-3 w-100'>
+                    <h2 className='fw-bold'>Careers At RM Pharma</h2>
+                    <p className='fw-normal fs-7'>Lorem ipsum dolor sit amet consectetur. Aliquam commodo tincidunt massa proin sapien at. Enim aliquet nisl viverra ipsum sem. </p>
+                </div>
+                <div className={styles.careers}>
+                    <Image src="/careers.png" alt="showcase pic" className='img-fluid' width={500} height={300} priority/>
+                </div>
             </div>
+            </section>
+
+            <section className='container d-flex flex-column gap-5'>
+                <div className='text-center px-5 d-flex flex-column gap-4'>
+                    <h2 className='fw-bold'>Current Openings</h2>
+                    <p className='fs-7 fw-normal'>Lorem ipsum dolor sit amet consectetur. Nisi nunc sagittis adipiscing ac massa ipsum faucibus at. Mauris sed non eget phasellus quis pulvinar gravida vitae. Eget congue dui ac tincidunt. Quisque metus tortor rhoncus suspendisse massa ac. Tristique sed tristique molestie eget vel vel mauris. </p>
+                </div>
+                <div className='d-flex flex-column gap-3 mb-5'>
+                    <Apply data={{title: "Position", text: "Experience", id: "123"}} />
+                    <Apply data={{title: "Position", text: "Experience", id: "1234"}} />
+                    <Apply data={{title: "Position", text: "Experience", id: "12345"}} />
+                    <Apply data={{title: "Position", text: "Experience", id: "123456"}} />
+                </div>
+            </section>
+            <section className='container d-flex flex-column gap-5'>
+                    <div className='text-center px-5 d-flex flex-column gap-4'>
+                        <h2 className='fw-bold'>Why Join Us?</h2>
+                    </div>
+                    <div className="d-flex gap-3 justify-content-evenly flex-sm-row flex-column">
+                        <Whyjoin data={{title: "Lorem1", number:"01", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                        <Whyjoin data={{title: "Lorem2", number:"02", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                        <Whyjoin data={{title: "Lorem3", number:"03", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                    </div>
+            </section>
+            <section className='container d-flex flex-column gap-5'>
+                    <div className='text-center px-5 d-flex flex-column gap-4'>
+                        <h2 className='fw-bold'>Services</h2>
+                    </div>
+                    <div className="d-flex gap-4 justify-content-evenly flex-wrap mb-5">
+                        <Services data={{src: "/medicineLogos.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                        <Services data={{src: "/medicineLogos.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                        <Services data={{src: "/medicineLogos.png", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
+                    </div>
+            </section>
+
+            <section className='container d-flex flex-column'>
+                <div>
+                    <h4 className='fw-bold'>Life at RM Pharma</h4>
+                </div>
+                
+                
+            </section>
+            <style jsx>{
+                ``
+            }
+            </style>
+
         </main>
 
     )

@@ -12,10 +12,14 @@ const Header = () => {
             <a className="navbar-brand" href="#">
                 <Image src="/logo.png" alt="Logo" width={70} height={45} priority/>
             </a>
-            <button className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i className="bi bi-list"></i>
+            <button className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                <i className="bi bi-list theRed"></i>
             </button>
-        
+            <style jsx>{`
+                .navbar-toggler:focus {
+                    box-shadow: 0px 0px 0px 0px #000000;
+                }
+            `}</style>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav d-flex justify-content-between text-center gap-3 w-100">
 
