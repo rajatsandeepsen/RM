@@ -15,7 +15,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 24px;
 
   color: var(--the-white);
@@ -24,6 +24,29 @@
   &:hover {
     background: transparent;
     color: var(--the-red);
+  }
+}
+.ButtonS {
+  display: flex;
+  padding: 0.5rem 2rem;
+  border-radius:  0px 25px 0px 0px;
+  border: 1px solid var(--the-red);
+  background: var(--the-white);
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: var(--the-red);
+  text-decoration: none;
+  transition: all 200ms, color 200ms;
+  &:hover {
+    background: transparent;
+    background: var(--the-red);
+    color: var(--the-white);
+
   }
 }
 
@@ -234,4 +257,69 @@
     display: flex;
   }
   
+}
+
+
+.Introimg {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  // width: 100px;
+  // height: 100px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    // display:none;
+  }
+
+  
+}
+
+.Introimg::after {
+  z-index: -1;
+  min-width: 1000px;
+  min-height: 1000px;
+  background-color: var(--the-red);
+}
+
+.community {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  // width: 100px;
+  // height: 100px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px 80px 0px 0px;
+    // display:none;
+  }
+}
+
+.community::before {
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  background-color: var(--the-red);
+  top: -50px;
+  left: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--the-white);
+  box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 60px 0px 0px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  img {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+    border-radius: 0px 60px 0px 0px;
+  }
 }

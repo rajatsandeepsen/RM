@@ -12,6 +12,14 @@ const Button = (props) => {
             
          );
     }
+    if (priority === "secondary") {
+        return ( 
+            <Link className={styles.ButtonS} href={link}>
+                {text}
+            </Link>
+            
+         );
+    }
     else {
         return ( 
             <a className={styles.Button2} href={link}>
