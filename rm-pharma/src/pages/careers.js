@@ -1,9 +1,17 @@
 import styles from '@/styles/Home.module.scss'
 import Image from 'next/image'
 import {Apply, Whyjoin, Services} from '@/components/applynow'
-import ResponsiveCarousel from '@/components/carousel'
+import Caroasel from '@/components/carousel'
+
+
 
 export default function Home() {
+    const expirence = [
+        {name: "nurse", img:"/confidence.png", dept: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."},
+        {name: "Doctor", img:"/confidence.png", dept: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."},
+        {name: "someone", img:"/confidence.png", dept: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."},
+        {name: "person", img:"/confidence.png", dept: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."}]
+
     return (
         <main>
             <section className={styles.careerShowcase}>
@@ -52,17 +60,13 @@ export default function Home() {
             </section>
 
             <section className='container d-flex flex-column'>
-                <div>
-                    <h4 className='fw-bold'>Life at RM Pharma</h4>
+                <div className='text-center px-5 d-flex flex-column gap-4'>
+                    <h2 className='fw-bold'>Life at RM Pharma</h2>
                 </div>
-                
-                
+                <div className='mb-5'>
+                    {Caroasel(expirence)}
+                </div>
             </section>
-            <style jsx>{
-                ``
-            }
-            </style>
-
         </main>
 
     )

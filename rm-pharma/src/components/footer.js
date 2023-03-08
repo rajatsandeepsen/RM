@@ -1,47 +1,48 @@
+import Link from 'next/link'
 const Footer = () => {
     return ( 
         <footer>
         
-        <div className="d-flex justify-content-evenly">
+        <div className="d-flex justify-content-evenly container">
           <ul>
             <li>
-              Microsoft Store
+              Lorem, ipsum
             </li>
-            <li><a href="">Account Profile</a></li>
-            <li><a href="">Download Center</a></li>
-            <li><a href="">Returns</a></li>
-            <li><a href="">Order Tracking</a></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
           </ul>
           <ul>
             <li>
-              Education
+              Lorem, ipsum
             </li>
-            <li><a href="">Microsoft in Education</a></li>
-            <li><a href="">Devices for Education</a></li>
-            <li><a href="">Microsoft teams for Education</a></li>
-            <li><a href="">Microsoft 365 Education</a></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
           </ul>
           <ul>
             <li>
-              Business
+              Lorem, ipsum
             </li>
-            <li><a href="">Microsoft cloud</a></li>
-            <li><a href="">Microsoft security</a></li>
-            <li><a href="">Axure</a></li>
-            <li><a href="">Dynamic 365</a></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
           </ul>
           <ul>
             <li>
-              Developer & IT
+              Lorem, ipsum
             </li>
-            <li><a href="">Developer center</a></li>
-            <li><a href="">Documentation</a></li>
-            <li><a href="">Microsoft learn</a></li>
-            <li><a href="">Order Tracking</a></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
+            <li><Link href="">Lorem, ipsum</Link></li>
           </ul>
         </div>
         
-          <p className="text-center w-100 border-top p-1 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus alias esse maiores id pariatur similique veritatis neque corrupti fugit</p>
+          <p className="text-center w-100 border-top py-3 fs-7 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus alias esse maiores id pariatur similique veritatis neque corrupti fugit</p>
         
         </footer>
 
