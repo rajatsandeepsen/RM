@@ -216,3 +216,22 @@
   padding-bottom: 5rem;
   min-height: 400px;
 }
+
+.squarebox {
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 100px;
+  min-height: 80px;
+  background-color: var(--the-white);
+  border-radius: 0px 30px 0px 0px;
+  margin-bottom: 1rem;
+
+}
+
+@media (max-width: 768px) {
+  .squarebox {
+    display: flex;
+  }
+  
+}

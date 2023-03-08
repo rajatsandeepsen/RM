@@ -50,7 +50,9 @@ export const Experience = (props) => {
       <>
             <div className="d-flex flex-column gap-3 justify-content-center flex-grow-1">
                 <div className='w-100'>
-                    <Image src={img} width={225} height={300} />
+                    <div className={styles.squarebox}>
+                        <Image className='d-block position-relative h-100' src={img} width={45} height={50} />
+                    </div>
                     <h4>{name}</h4>
                     <h6>{dept}</h6>
                 </div>
