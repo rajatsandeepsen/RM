@@ -11,11 +11,11 @@ const addClasses = (className) =>  className.split(' ').map(c => styles[c]).join
 
 export default function Home() {
 
-  useEffect(() => {
-    setTimeout(()=>{
-      location.href = "/"
-    }, 3000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(()=>{
+  //     location.href = "/"
+  //   }, 3000)
+  // }, [])
   
 
   return (
