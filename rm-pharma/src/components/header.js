@@ -13,7 +13,7 @@ const Header = () => {
                 <Image src="/logo.png" alt="Logo" width={70} height={45} priority/>
             </a>
             <button className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-                <i className="bi bi-list theRed"></i>
+                <i className="bi bi-list theRed fs-3"></i>
             </button>
             <style jsx>{`
                 .navbar-toggler:focus {
@@ -28,9 +28,9 @@ const Header = () => {
                     <input type="search" placeholder="Search" />
                 </form>
                 <Button data={{text: "Home", link: "/", priority:""}} />
-                <Button data={{text: "About Us", link: "/aboutus", priority:""}} />
-                <Button data={{text: "Products", link: "/product", priority:""}} />
-                <Button data={{text: "Contact", link: "/contact", priority:"primary"}} />
+                <Button data={{text: "About Us", link: "/#aboutus", priority:""}} />
+                <Button data={{text: "Products", link: "/#products", priority:""}} />
+                <Button data={{text: "Contact", link: "/#contact", priority:"primary"}} />
                 
                 
                 </ul>

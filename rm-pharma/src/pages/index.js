@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* List of Products */}
 
-        <section className='container p-3 d-flex flex-column gap-3 gap-md-4 my-5'>
+        <section id='products' className='container p-3 d-flex flex-column gap-3 gap-md-4 my-5'>
           <div className='d-flex flex-column gap-2'>
             <div className='d-flex justify-content-between'>
               <h4 className='fw-bold'>List of Products</h4>
@@ -105,7 +105,7 @@ export default function Home() {
 
         {/* why choose us? */}
 
-        <section className='container d-flex flex-column flex-md-row gap-3 gap-md-4 my-5'>
+        <section id='aboutus' className='container d-flex flex-column flex-md-row gap-3 gap-md-4 my-5'>
           <div className='w-100 d-flex justify-content-center'>
             <Image src="/doctorLooking.png" alt="" width={300} height={500} className={styles.whychooseimg} priority/>
           </div>
@@ -127,7 +127,7 @@ export default function Home() {
 
         {/* Contact us */}
 
-        <section className='container d-flex flex-column text-center gap-3 gap-md-4 my-5'>
+        <section id='contact' className='container d-flex flex-column text-center gap-3 gap-md-4 my-5'>
           <h2 className='fw-bold'>Contact Us</h2>
           <p>Lorem ipsum dolor sit amet consectetur? Id vulputate augue ipsum tempus quisque sapien amet lacus.</p>
           <div className={styles.Contactus}>
@@ -174,8 +174,6 @@ export default function Home() {
                     <Link className='text-white' href="www.facebook.com" ><i className="fs-2 bi bi-facebook"></i></Link>
                     <Link className='text-white' href="www.instagram.com" ><i className="fs-2 bi bi-instagram"></i></Link>
                     <Link className='text-white' href="www.twitter.com" ><i className="fs-2 bi bi-twitter"></i></Link>
-                    
-                   
                   </div>
                 
                 </div>

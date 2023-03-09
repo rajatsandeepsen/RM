@@ -26,7 +26,7 @@ export default function Home() {
             </div>
             </section>
 
-            <section className='container d-flex flex-column gap-5'>
+            <section className='container d-flex flex-column gap-3 gap-md-4'>
                 <div className='text-center px-5 d-flex flex-column gap-4'>
                     <h2 className='fw-bold'>Current Openings</h2>
                     <p className='fs-7 fw-normal'>Lorem ipsum dolor sit amet consectetur. Nisi nunc sagittis adipiscing ac massa ipsum faucibus at. Mauris sed non eget phasellus quis pulvinar gravida vitae. Eget congue dui ac tincidunt. Quisque metus tortor rhoncus suspendisse massa ac. Tristique sed tristique molestie eget vel vel mauris. </p>
@@ -38,7 +38,7 @@ export default function Home() {
                     <Apply data={{title: "Position", text: "Experience", id: "123456"}} />
                 </div>
             </section>
-            <section className='container d-flex flex-column gap-5'>
+            <section className='container d-flex flex-column gap-3 gap-md-4'>
                     <div className='text-center px-5 d-flex flex-column gap-4'>
                         <h2 className='fw-bold'>Why Join Us?</h2>
                     </div>
@@ -48,7 +48,7 @@ export default function Home() {
                         <Whyjoin data={{title: "Lorem3", number:"03", text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam laborum iusto dolore, harum at suscipit!" }} />
                     </div>
             </section>
-            <section className='container d-flex flex-column gap-5'>
+            <section className='container d-flex flex-column gap-3 gap-md-4'>
                     <div className='text-center px-5 d-flex flex-column gap-4'>
                         <h2 className='fw-bold'>Services</h2>
                     </div>

@@ -29,16 +29,11 @@ const Footer = () => {
             <li><Link href="">Lorem, ipsum</Link></li>
             <li><Link href="">Lorem, ipsum</Link></li>
             <li><Link href="">Lorem, ipsum</Link></li>
-            <li><Link href="">Lorem, ipsum</Link></li>
-          </ul>
-          <ul>
-            <li>
-              Lorem, ipsum
+            <li className='d-flex gap-4 mt-auto'>
+              <Link className='text-white' href="www.facebook.com" ><i className="fs-6 bi bi-facebook"></i></Link>
+              <Link className='text-white' href="www.instagram.com" ><i className="fs-6 bi bi-instagram"></i></Link>
+              <Link className='text-white' href="www.twitter.com" ><i className="fs-6 bi bi-twitter"></i></Link>
             </li>
-            <li><Link href="">Lorem, ipsum</Link></li>
-            <li><Link href="">Lorem, ipsum</Link></li>
-            <li><Link href="">Lorem, ipsum</Link></li>
-            <li><Link href="">Lorem, ipsum</Link></li>
           </ul>
         </div>
         
