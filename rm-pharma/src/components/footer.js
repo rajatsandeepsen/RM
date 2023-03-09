@@ -42,7 +42,7 @@ const Footer = () => {
           </ul>
         </div>
         
-          <p className="text-center w-100 border-top py-3 fs-7 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus alias esse maiores id pariatur similique veritatis neque corrupti fugit</p>
+          <p className="text-center border-top p-1 py-3 fs-7 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellendus alias esse maiores id pariatur similique veritatis neque corrupti fugit</p>
         
         </footer>
 

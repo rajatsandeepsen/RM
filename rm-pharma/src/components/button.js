@@ -22,9 +22,9 @@ const Button = (props) => {
     }
     else {
         return ( 
-            <a className={styles.Button2} href={link}>
+            <Link className={styles.Button2} href={link}>
                 {text}
-            </a>
+            </Link>
          );
     }
     
