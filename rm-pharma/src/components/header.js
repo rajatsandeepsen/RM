@@ -1,10 +1,34 @@
 import Image from 'next/image'
 import Button from '@/components/button';
 import styles from '@/styles/Home.module.scss'
-import { useEffect } from 'react';
+import SelectSearch from 'react-select-search';
+import 'react-select-search/style.css'
+
 
 const Header = () => {
 
+    const colors =[
+        {
+          name: 'Orange',
+          value: 'orange'
+        },
+        {
+          name: 'Red',
+          value: 'red'
+        },
+        {
+          name: 'Blue',
+          value: 'blue'
+        },
+        {
+          name: 'Purple',
+          value: 'purple'
+        },
+        {
+          name: 'Yellow',
+          value: 'yellow'
+        }
+      ]
 
     return (
     <header>
@@ -23,10 +47,11 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav d-flex justify-content-between text-center gap-3 w-100">
 
-                <form className={styles.Search}>
+                <div className={styles.Search}>
                     <i className="bi bi-search"/>
-                    <input type="search" placeholder="Search" />
-                </form>
+                    <SelectSearch search={true} options={colors} name="language" placeholder="Search" />
+                    <i className="bi bi-chevron-down"/>
+                </div>
                 <Button data={{text: "Home", link: "/", priority:""}} />
                 <Button data={{text: "About Us", link: "/#aboutus", priority:""}} />
                 <Button data={{text: "Products", link: "/#products", priority:""}} />

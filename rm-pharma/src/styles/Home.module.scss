@@ -79,6 +79,7 @@
 .Search {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   border-radius: var(--the-border);
   border: 1px solid var(--gray);
@@ -100,6 +101,30 @@
       color: var(--gray);
     }
   }
+
+  div:has( > ul){
+    padding: 0!important;
+    margin: 0!important;
+    background: none!important;
+    border: solid var(--gray-light) 1px!important;
+    box-shadow: none!important;
+    ul {
+      padding: 0!important;
+      background-color: none!important;
+      
+    }
+    button {
+      background-color: var(--the-white);
+      color: #000;
+      transition: all 0.2s ease 0s;
+      &:hover {
+        background-color: var(--the-red)!important;
+        color: var(--the-white)!important;
+      }
+
+    }
+  }
+
 }
 
 .careerShowcase {
@@ -405,7 +430,11 @@
 }
 
 .whychooseimg {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0 64px 0 0;
+    height: 600px;
+    width: 100%;
+    // object-fit: cover;
+    overflow: hidden;
+    img {
+      border-radius: 0 64px 0 0;
+    }
   }

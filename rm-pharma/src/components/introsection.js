@@ -53,7 +53,7 @@ export function Clients(expirence){
 
             {expirence.map((data) => (
                 <SwiperSlide className={styles.Clients}>
-                <Image src='/client.png' className='img-fluid' width={100} height={100} />
+                <Image src='/client.png' className='img-fluid' width={300} height={100} priority/>
                   <div className="d-flex text-start flex-column gap-3 p-3 px-md-5 justify-content-center">
                     <h4 className='fw-bold'>{data.name}</h4>
                     <h6 className=''>{data.prof}</h6>

@@ -106,10 +106,10 @@ export default function Home() {
         {/* why choose us? */}
 
         <section id='aboutus' className='container d-flex flex-column flex-md-row gap-3 gap-md-4 my-5'>
-          <div className='w-100 d-flex justify-content-center'>
-            <Image src="/doctorLooking.png" alt="" width={300} height={500} className={styles.whychooseimg} priority/>
+          <div className={styles.whychooseimg}>
+            <Image src="/doctorLooking.png" alt="" width={500} height={100} className='img-fluid' priority />
           </div>
-          <div className='w-100 d-flex flex-column gap-1 gap-md-4'>
+          <div className='w-100 d-flex flex-column justify-content-center gap-1 gap-md-4'>
               <h2 className='fw-bold mb-4'>Why choose us?</h2>
               
               <Whychoose data={{ title: "Quality is Key", text:"We treat healthcare with utmost seriousness and priority thus our premium quality products ___,___and___ are our pride.", number:"01" }} />
