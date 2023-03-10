@@ -9,6 +9,9 @@ import Meta from '@/components/meta'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Inter,Montserrat } from 'next/font/google'
+const montserrat = Montserrat({ subsets: ['latin'] })
+
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -28,6 +31,13 @@ export default function App({ Component, pageProps }) {
       <link rel="icon" href="/favicon.ico" />
       <link rel="short icon" href="/favicon.ico" />
     </Head>
+    <style jsx global>{
+      `html {
+        font-family: ${montserrat.style.fontFamily};
+      }`
+    }
+    
+    </style>
   <Layer>
   <Component {...pageProps} />
   </Layer>
