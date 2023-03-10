@@ -30,7 +30,7 @@ export default function Home() {
       <main className={styles.main}>
       {/* Landing Intro */}
         <section className='container p-3 d-flex flex-column-reverse gap-5 gap-md-0 align-items-start align-items-md-center my-5 flex-md-row'>
-            <div className='d-flex flex-column gap-3 align-items-start w-100'>
+            <div className='d-flex flex-column gap-3 align-items-start w-100' data-aos="fade-right">
               <div className='w-100'>
               <h1 className='fw-bold'>
                 Finding The Cure<br/>To Every Condition !
@@ -40,18 +40,18 @@ export default function Home() {
               <span><Button data={{text: "Click here", link: "/", priority:"primary"}} /></span>
             </div>
 
-            <div className={styles.Introimg}>
+            <div className={styles.Introimg} data-aos="fade-left">
               <Image src="/intro.png" alt="Logo" width={550} height={400} priority/>
             </div>
         </section>
 
         {/* Community */}
         <section className='container p-3 d-flex flex-column gap-5 align-items-start align-items-md-center my-5 flex-md-row'>
-            <div className={styles.community}>
+            <div className={styles.community} data-aos="fade-right">
               <Image src="/womanPharmacist.png" alt="Logo" width={550} height={400} priority/>
             </div>
 
-            <div className='d-flex flex-column gap-3 align-items-start w-75'>
+            <div className='d-flex flex-column gap-3 align-items-start w-75' data-aos="fade-left">
               <div className='w-100'>
               <h3 className='fw-bold'>
                 Building a <br/>
@@ -68,7 +68,7 @@ export default function Home() {
         <section id='products' className='container p-3 d-flex flex-column gap-3 gap-md-4 my-5'>
           <div className='d-flex flex-column gap-2'>
             <div className='d-flex justify-content-between'>
-              <h4 className='fw-bold'>List of Products</h4>
+              <h4 className='fw-bold' data-aos="fade-right">List of Products</h4>
               <span>
                 <a className={styles.Button2} type="button" data-bs-toggle="collapse" data-bs-target=".moreProducts">
                     See all
@@ -79,25 +79,24 @@ export default function Home() {
             <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5'>
               <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
               <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: true }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: true }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: true }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: true }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: true }} />
+              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
+              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
+              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
             </div>
 
             <div className='d-flex justify-content-between mt-5'>
-              <h4 className='fw-bold'>Shop by Category</h4>
-              <span><Button data={{text: "See all", link: "/", priority:""}} /></span>
+              <h4 className='fw-bold' data-aos="fade-right">Shop by Category</h4>
+              <span>
+                <a className={styles.Button2} type="button" data-bs-toggle="collapse" data-bs-target=".moreCategory">
+                    See all
+                </a>
+              </span>
             </div>
             <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5'>
               <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
               <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
+              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreCategory" }} />
+              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreCategory" }} />
             </div>
           
           </div>
@@ -106,11 +105,11 @@ export default function Home() {
         {/* why choose us? */}
 
         <section id='aboutus' className='container d-flex flex-column flex-md-row gap-3 gap-md-4 my-5'>
-          <div className={styles.whychooseimg}>
+          <div className={styles.whychooseimg} data-aos="fade-right">
             <Image src="/doctorLooking.png" alt="" width={500} height={100} className='img-fluid' priority />
           </div>
-          <div className='w-100 d-flex flex-column justify-content-center gap-1 gap-md-4'>
-              <h2 className='fw-bold mb-4'>Why choose us?</h2>
+          <div className='w-100 d-flex flex-column justify-content-center align-items-center gap-2 ps-2 gap-md-4'>
+              <h2 className='fw-bold mb-4' data-aos="fade-up">Why choose us?</h2>
               
               <Whychoose data={{ title: "Quality is Key", text:"We treat healthcare with utmost seriousness and priority thus our premium quality products ___,___and___ are our pride.", number:"01" }} />
               <Whychoose data={{ title: "Most Trusted", text:"Serving humanity since___ years we have been one of the most trusted healthcare brands for drugs.", number:"02" }} />
@@ -121,41 +120,41 @@ export default function Home() {
         {/* Our Clients says */}
 
         <section className='container d-flex flex-column gap-5 text-center my-5 justify-content-center'>
-            <h2 className='fw-bold mb-4'>Our Clients says</h2>              
+            <h2 className='fw-bold mb-4' data-aos="fade-up">Our Clients says</h2>              
                 {Clients(expirence)}
         </section>
 
         {/* Contact us */}
 
         <section id='contact' className='container d-flex flex-column text-center gap-3 gap-md-4 my-5'>
-          <h2 className='fw-bold'>Contact Us</h2>
-          <p>Lorem ipsum dolor sit amet consectetur? Id vulputate augue ipsum tempus quisque sapien amet lacus.</p>
+          <h2 className='fw-bold' data-aos="fade-up">Contact Us</h2>
+          <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur? Id vulputate augue ipsum tempus quisque sapien amet lacus.</p>
           <div className={styles.Contactus}>
           <div className='d-flex w-100'>
               <form action="" className='d-flex flex-column gap-3 my-4 p-4 w-100'>
                 <div className='d-flex gap-3'>
                   <div className='d-flex flex-column text-start gap-2 w-100'>
-                    <label>First Name</label>
-                    <input type="text" placeholder='Name' />
+                    <label data-aos="fade-up">First Name</label>
+                    <input data-aos="fade-up" type="text" placeholder='Name' />
                   </div>
                   <div className='d-flex flex-column text-start gap-2 w-100'>
-                    <label>Surname</label>
-                    <input type="text" placeholder='Name' />
+                    <label data-aos="fade-up">Surname</label>
+                    <input data-aos="fade-up" type="text" placeholder='Name' />
                   </div>
                 </div>
                 <div className='d-flex flex-column text-start gap-2'>
-                    <label>Email Address</label>
-                    <input type="email" placeholder='Enter Email Address' />
+                    <label data-aos="fade-up">Email Address</label>
+                    <input data-aos="fade-up" type="email" placeholder='Enter Email Address' />
                 </div>
                 <div className='d-flex flex-column text-start gap-2'>
-                    <label>Company Name (optional)</label>
-                    <input type="email" placeholder='Enter Company Name' />
+                    <label data-aos="fade-up">Company Name (optional)</label>
+                    <input data-aos="fade-up" type="email" placeholder='Enter Company Name' />
                 </div>
                 <div className='d-flex flex-column text-start gap-2'>
-                    <label>Your Message</label>
-                    <textarea type="email" placeholder='Write your message here' />
+                    <label data-aos="fade-up">Your Message</label>
+                    <textarea data-aos="fade-up" type="email" placeholder='Write your message here' />
                 </div>
-                <div className='d-flex flex-column text-start align-items-start gap-2'>
+                <div className='d-flex flex-column text-start align-items-start gap-2' data-aos="fade-up">
                   <span><Button data={{text: "Submit", link: "", priority:"primary"}} /></span>
                 </div>
               </form>
@@ -163,17 +162,17 @@ export default function Home() {
 
             <div className={styles.contact}>
                 <div className='w-100 h-100 ms-3 d-flex flex-column gap-4 p-5 align-items-start'>
-                  <h3>Contact Info</h3>
+                  <h3 data-aos="fade-up">Contact Info</h3>
                   <div className="w-100 d-flex flex-column align-items-start gap-4 list-unstyled">
-                    <li><a href="http://lorem.com" target="_blank" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
-                    <li><a href="http://lorem.com" target="_blank" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
-                    <li><a href="http://lorem.com" target="_blank" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
+                    <li><a href="http://lorem.com" target="_blank" data-aos="fade-up" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
+                    <li><a href="http://lorem.com" target="_blank" data-aos="fade-up" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
+                    <li><a href="http://lorem.com" target="_blank" data-aos="fade-up" className='d-flex align-items-center gap-4 text-white fs-6'><i className="bi bi-globe fs-3"></i> www.lorem.com</a></li>
                   </div>
 
                   <div className='d-flex gap-4 mt-auto'>
-                    <Link className='text-white' href="www.facebook.com" ><i className="fs-2 bi bi-facebook"></i></Link>
-                    <Link className='text-white' href="www.instagram.com" ><i className="fs-2 bi bi-instagram"></i></Link>
-                    <Link className='text-white' href="www.twitter.com" ><i className="fs-2 bi bi-twitter"></i></Link>
+                    <Link className='text-white' data-aos="fade-left" href="www.facebook.com" ><i className="fs-2 bi bi-facebook"></i></Link>
+                    <Link className='text-white' data-aos="fade-left" href="www.instagram.com" ><i className="fs-2 bi bi-instagram"></i></Link>
+                    <Link className='text-white' data-aos="fade-left" href="www.twitter.com" ><i className="fs-2 bi bi-twitter"></i></Link>
                   </div>
                 
                 </div>

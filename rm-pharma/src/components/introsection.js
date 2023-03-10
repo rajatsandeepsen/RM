@@ -14,7 +14,7 @@ export const Product = (props) => {
     const { name, src, text, link, extra } = props.data;
     
     return ( 
-        <div className={extra? "col moreProducts collapse": "col"}>
+        <div className={extra? `col d-lg-block ${extra} collapse`: "col"}>
             <div className={styles.product}>
                 <Image src={"/products/" + src} alt="Logo" width={200} height={200} priority/>
                 <h5 className='fw-semibold'>{name}</h5>
@@ -28,7 +28,7 @@ export const Product = (props) => {
 export const Whychoose = (props) => {
     const { title, text, number } = props.data;
     return (
-        <div className='d-flex gap-4 align-items-start'>
+        <div className='d-flex gap-4 align-items-start' data-aos="fade-up">
             <li className={styles.numberTrack}>{number}</li>
             <div className='w-100'>
                 <h4 className='fw-semibold'>{title}</h4>

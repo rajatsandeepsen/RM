@@ -32,11 +32,11 @@ const Header = () => {
 
     return (
     <header>
-        <nav className="navbar container justify-content-between navbar-expand-lg navbar-light px-3 py-4  gap-3">
-            <a className="navbar-brand" href="#">
+        <nav className="navbar container justify-content-between navbar-expand-lg navbar-light px-3 py-4 gap-3">
+            <a className="navbar-brand" href="#" data-aos="fade-right">
                 <Image src="/logo.png" alt="Logo" width={70} height={45} priority/>
             </a>
-            <button className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+            <button data-aos="fade-left" className="navbar-toggler btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
                 <i className="bi bi-list theRed fs-3"></i>
             </button>
             <style jsx>{`
@@ -45,17 +45,16 @@ const Header = () => {
                 }
             `}</style>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav d-flex justify-content-between text-center gap-3 w-100">
-
+            <ul className="navbar-nav d-flex justify-content-between align-items-lg-center w-100 text-start gap-3">
                 <div className={styles.Search}>
                     <i className="bi bi-search"/>
                     <SelectSearch search={true} options={colors} name="language" placeholder="Search" />
-                    <i className="bi bi-chevron-down"/>
+                    
                 </div>
-                <Button data={{text: "Home", link: "/", priority:""}} />
-                <Button data={{text: "About Us", link: "/#aboutus", priority:""}} />
-                <Button data={{text: "Products", link: "/#products", priority:""}} />
-                <Button data={{text: "Contact", link: "/#contact", priority:"primary"}} />
+                <span data-aos="fade-left"><Button data={{text: "Home", link: "/", priority:""}} /></span>
+                <span data-aos="fade-left"><Button data={{text: "About Us", link: "/#aboutus", priority:""}} /></span>
+                <span data-aos="fade-left"><Button data={{text: "Products", link: "/#products", priority:""}} /></span>
+                <span data-aos="fade-left"><Button data={{text: "Contact", link: "/#contact", priority:"primary"}} /></span>
                 
                 
                 </ul>

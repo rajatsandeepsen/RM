@@ -6,10 +6,18 @@ import Layer from '@/components/layer'
 import Head from 'next/head'
 import Meta from '@/components/meta'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function App({ Component, pageProps }) {
-  
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
+
+    AOS.init({
+      easing: "ease-out",
+      once: true,
+      offset: 50,
+    });
   }, []);
 
   return (
