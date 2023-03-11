@@ -25,7 +25,7 @@ export const Apply = (props) => {
 export const Whyjoin = (props) => {
     const {title, number, text} = props.data;
     return ( 
-        <div className='d-flex flex-column gap-3 text-center'>
+        <div className='d-flex flex-column gap-3 text-center' data-aos="fade-right">
             <li className={styles.numberTrack}>{number}</li>
             <h6 className='fw-bold'>{title}</h6>
             <p className='fs-7'>{text}</p>
@@ -36,7 +36,7 @@ export const Whyjoin = (props) => {
 export const Services = (props) => {
     const {src, text} = props.data;
     return ( 
-        <div className={styles.Services}>
+        <div className={styles.Services} data-aos="fade-left">
             <Image src={src}  alt="Service" width={60} height={60}/>
             <p className='fs-7'>{text}</p>
         </div> 

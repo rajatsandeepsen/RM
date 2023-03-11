@@ -20,6 +20,8 @@ export default function App({ Component, pageProps }) {
       easing: "ease-out",
       once: true,
       offset: 50,
+      duration: 500,
+      delay: 200,
     });
   }, []);
 

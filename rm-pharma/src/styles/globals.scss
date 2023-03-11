@@ -165,3 +165,7 @@ main {
   background-color: var(--the-red)!important;
 }
 
+div:not(:scope) > :scope ~ i {
+  background-color: red!important;
+  border: 1px solid red !important;
+}
