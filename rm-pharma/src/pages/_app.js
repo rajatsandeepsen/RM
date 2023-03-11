@@ -33,13 +33,6 @@ export default function App({ Component, pageProps }) {
       <link rel="icon" href="/favicon.ico" />
       <link rel="short icon" href="/favicon.ico" />
     </Head>
-    <style jsx global>{
-      `html {
-        font-family: ${montserrat.style.fontFamily};
-      }`
-    }
-    
-    </style>
   <Layer>
   <Component {...pageProps} />
   </Layer>

@@ -61,7 +61,7 @@ export default function Home() {
                     <div className='text-center px-5 d-flex flex-column gap-4' data-aos="fade-up">
                         <h2 className='fw-bold'>Why Join Us?</h2>
                     </div>
-                    <div className="d-flex gap-3 justify-content-evenly flex-sm-row flex-column">
+                    <div className="d-flex gap-3 gap-md-5 justify-content-evenly flex-md-row flex-column">
 
                         {joiningReasons.map((data,index)=>(
                             <Whyjoin data={{...data, index: ( index + 1 )}} />

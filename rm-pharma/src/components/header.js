@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Button from '@/components/button';
-import styles from '@/styles/Home.module.scss'
 import SelectSearch from 'react-select-search';
 import 'react-select-search/style.css'
+import styles from '@/styles/Home.module.scss'
 
 
 const Header = () => {

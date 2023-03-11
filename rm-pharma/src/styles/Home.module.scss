@@ -82,7 +82,7 @@
   align-items: center;
   gap: 1rem;
   border-radius: var(--the-border);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-light);
   padding: 0.5rem 1rem;
   i {
     font-size: small;
@@ -104,6 +104,32 @@
       color: var(--gray);
     }
   }
+
+  // for firefox &  mobiles
+    div {
+      padding: 0!important;
+      margin: 0!important;
+      background: none!important;
+      border: none;
+      box-shadow: none!important;
+      ul {
+      padding: 0!important;
+      background-color: none!important;
+      border: 1px solid var(--gray-light);
+      button {
+        background-color: var(--the-white);
+        
+        color: #000;
+        transition: all 0.2s ease 0s;
+        &:hover {
+          background-color: var(--the-red)!important;
+          color: var(--the-white)!important;
+        }
+      }
+    }
+  }
+
+  // for others
 
   div:has( > ul){
     padding: 0!important;
