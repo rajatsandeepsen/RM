@@ -10,11 +10,15 @@ import "swiper/css/pagination";
 
 
 export const Product = (props) => {
-    props.data.hasOwnProperty(''); 
-    const { name, src, text, link, extra } = props.data;
+    // props.data.hasOwnProperty(''); 
+    let { name, src, text, link, index, extra } = props.data;
+
+    if  (index <= 2) {
+        extra = "";
+      }
     
     return ( 
-        <div className={extra? `col d-lg-block ${extra} collapse`: "col"}>
+        <div className={extra? `col d-lg-block ${extra} collapse`: "col"} data-aos="fade-left" data-aos-delay={(2+index) + "00"}>
             <div className={styles.product}>
                 <Image src={"/products/" + src} alt="Logo" width={200} height={200} priority/>
                 <h5 className='fw-semibold'>{name}</h5>
@@ -28,8 +32,8 @@ export const Product = (props) => {
 export const Whychoose = (props) => {
     const { title, text, number } = props.data;
     return (
-        <div className='d-flex gap-4 align-items-start' data-aos="fade-up">
-            <li className={styles.numberTrack}>{number}</li>
+        <div className='d-flex gap-4 align-items-start' data-aos="fade-up" data-aos-delay={(2 + number) + "00"}>
+            <li className={styles.numberTrack}>{"0"  + number}</li>
             <div className='w-100'>
                 <h4 className='fw-semibold'>{title}</h4>
                 <p>{text}</p>

@@ -3,13 +3,9 @@ import { Inter,Montserrat } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Button from '@/components/button'
 import Link from 'next/link'
-import {Clients, Product, Whychoose} from '@/components/introsection'
+import {Clients, Product, Whychoose} from '@/components/index-assets'
 
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import 'swiper/css';
-import "swiper/css/pagination";
+const addClasses = (className) =>  className.split(' ').map(c => styles[c]).join(' ')
 
 const expirence = [
   {name: "nurse", img:"/client.png", prof: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."},
@@ -18,11 +14,26 @@ const expirence = [
   {name: "person", img:"/client.png", prof: "position", text: "Lorem ipsum dolor sit amet consectetur. Dignissim eu fermentum pellentesque a eget sit lorem a tincidunt. Lectus in pretium lacus consectetur euismod est velit. Elementum quis tempus nibh nunc elit nascetur ipsum orci praesent. Et dictumst lacus fermentum amet iaculis justo faucibus sapien lectus."}]
 
 
+const whychooselist = [
+  { title: "Quality is Key", text:"We treat healthcare with utmost seriousness and priority thus our premium quality products ___,___and___ are our pride." },
+  { title: "Most Trusted", text:"Serving humanity since___ years we have been one of the most trusted healthcare brands for drugs." },
+  { title: "Customer Friendly", text:"Here at RM Pharamaceuticals we have a passion for putting the customer first and relentless working for their utmost satisfaction." },
+]
 
-const inter = Inter({ subsets: ['latin'] })
-const montserrat = Montserrat({ subsets: ['latin'] })
+const categorylist = [
+    { name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p2.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p3.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p4.png", text: "lorem lorem", link: "/" },
+  ]
 
-const addClasses = (className) =>  className.split(' ').map(c => styles[c]).join(' ')
+const productlist = [
+    { name: "lorem", src: "p7.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p8.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p4.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p5.png", text: "lorem lorem", link: "/" },
+    { name: "lorem", src: "p6.png", text: "lorem lorem", link: "/" },
+  ]
 
 export default function Home() {
   return (
@@ -40,14 +51,14 @@ export default function Home() {
               <span><Button data={{text: "Click here", link: "/", priority:"primary"}} /></span>
             </div>
 
-            <div className={styles.Introimg} data-aos="fade-left">
+            <div className={styles.Introimg} data-aos="fade-left" data-aos-delay="400">
               <Image src="/intro.png" alt="Logo" width={550} height={400} priority/>
             </div>
         </section>
 
         {/* Community */}
         <section className='container p-3 d-flex flex-column gap-5 align-items-start align-items-md-center my-5 flex-md-row'>
-            <div className={styles.community} data-aos="fade-right">
+            <div className={styles.community} data-aos="fade-right" data-aos-delay="400">
               <Image src="/womanPharmacist.png" alt="Logo" width={550} height={400} priority/>
             </div>
 
@@ -77,11 +88,11 @@ export default function Home() {
               
             </div>
             <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5'>
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreProducts" }} />
+
+              {productlist.map((data,index)=>(
+                <Product data={{...data, index: (index + 1), extra:"moreProducts"}} />
+              ))} 
+
             </div>
 
             <div className='d-flex justify-content-between mt-5'>
@@ -93,10 +104,11 @@ export default function Home() {
               </span>
             </div>
             <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5'>
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreCategory" }} />
-              <Product data={{ name: "lorem", src: "p1.png", text: "lorem lorem", link: "/", extra: "moreCategory" }} />
+
+              {categorylist.map((data,index)=>(
+                <Product data={{...data, index: (index + 1), extra:"moreCategory"}} />
+              ))}  
+            
             </div>
           
           </div>
@@ -110,10 +122,11 @@ export default function Home() {
           </div>
           <div className='w-100 d-flex flex-column justify-content-center align-items-center gap-2 ps-2 gap-md-4'>
               <h2 className='fw-bold mb-4' data-aos="fade-up">Why choose us?</h2>
-              
-              <Whychoose data={{ title: "Quality is Key", text:"We treat healthcare with utmost seriousness and priority thus our premium quality products ___,___and___ are our pride.", number:"01" }} />
-              <Whychoose data={{ title: "Most Trusted", text:"Serving humanity since___ years we have been one of the most trusted healthcare brands for drugs.", number:"02" }} />
-              <Whychoose data={{ title: "Customer Friendly", text:"Here at RM Pharamaceuticals we have a passion for putting the customer first and relentless working for their utmost satisfaction.", number:"03" }} />
+
+              {whychooselist.map((data, index)=>(
+                <Whychoose data={{...data, number:(index+1) }} />
+              ))}
+
           </div>
         </section>
 

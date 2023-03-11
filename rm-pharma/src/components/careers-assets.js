@@ -1,13 +1,12 @@
 import Button from '@/components/button'
 import styles from '@/styles/Home.module.scss'
 import Image from 'next/image'
-import { SwiperSlide } from 'swiper/react';
 
 export const Apply = (props) => {
-    const {title, text, id} = props.data;
+    const {title, index, text, id} = props.data;
 
     return ( 
-            <div className='d-flex justify-content-between align-items-center p-1 applynow'>
+            <div className='d-flex justify-content-between align-items-center p-1 applynow' data-aos="fade-up" data-aos-delay={(2+index) + "00"}>
                 <div>
                     <h6 className='fw-bold fs-5'>{title}</h6>
                     <p className='fs-7'>{text}</p>
@@ -23,10 +22,10 @@ export const Apply = (props) => {
 }
  
 export const Whyjoin = (props) => {
-    const {title, number, text} = props.data;
+    const {title, index, text} = props.data;
     return ( 
-        <div className='d-flex flex-column gap-3 text-center' data-aos="fade-right">
-            <li className={styles.numberTrack}>{number}</li>
+        <div className='d-flex flex-column gap-3 text-center' data-aos="fade-right"  data-aos-delay={(2+index) + "00"}>
+            <li className={styles.numberTrack}>{"0" + index}</li>
             <h6 className='fw-bold'>{title}</h6>
             <p className='fs-7'>{text}</p>
         </div> 
@@ -34,9 +33,9 @@ export const Whyjoin = (props) => {
 }
 
 export const Services = (props) => {
-    const {src, text} = props.data;
+    const {src, index, text} = props.data;
     return ( 
-        <div className={styles.Services} data-aos="fade-left">
+        <div className={styles.Services} data-aos="fade-left" data-aos-delay={(2+index) + "00"}>
             <Image src={src}  alt="Service" width={60} height={60}/>
             <p className='fs-7'>{text}</p>
         </div> 

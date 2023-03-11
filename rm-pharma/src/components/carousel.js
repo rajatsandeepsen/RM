@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/css';
 import "swiper/css/pagination";
 
-import {Experience} from '@/components/applynow'
+import {Experience} from '@/components/careers-assets'
 
 
 export default function Caroasel(expirence){
